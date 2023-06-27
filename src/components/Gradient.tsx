@@ -11,8 +11,8 @@ const Gradient = () => {
   }, [color1, color2]);
 
   return (
-    <div className="app">
-      <h1>Create you own gradient!</h1>
+    <div className="gradient">
+      <h1>Create You Own Gradient!</h1>
       <div className="colorPicker">
         <input type="color" name="color1" value={color1} />
         <input type="color" name="color2" value={color2} />
