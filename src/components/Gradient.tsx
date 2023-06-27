@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import randomColor from "randomcolor";
 
 const Gradient = () => {
   const [color1, setColor1] = useState(randomColor());
   const [color2, setColor2] = useState(randomColor());
+
+  useEffect(() => {
+    const gradient = `linear-gradient(to right,${color1},${color2})`;
+    document.body.style.background = gradient;
+  }, [color1, color2]);
 
   return (
     <div className="app">
