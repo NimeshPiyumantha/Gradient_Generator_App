@@ -79,6 +79,7 @@ input[type="color"] {
   color: rgb(20, 15, 19);
   font-size: medium;
   font-weight: bold;
+  cursor: pointer;
 }
 
 option {
