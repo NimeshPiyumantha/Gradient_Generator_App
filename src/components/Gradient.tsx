@@ -32,7 +32,7 @@ const Gradient = () => {
 
   return (
     <div className="gradient">
-      <h1>Create you own gradient!</h1>
+      <h1>Create You Own Gradient !</h1>
       <div className="colorPicker">
         <input
           type="color"
@@ -48,7 +48,7 @@ const Gradient = () => {
         />
       </div>
       <button className="btnRandom" onClick={handleRandomClick}>
-        Generate Random gradient!
+        Generate Random Gradient !
       </button>
       <div className="output">
         <SyntaxHighlighter language="css" style={arduinoLight}>
