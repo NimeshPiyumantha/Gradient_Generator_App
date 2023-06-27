@@ -1,12 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import styleImport from "vite-plugin-style-import";
-import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/dist/",
   build: {
     chunkSizeWarningLimit: 1500,
     rollupOptions: {
