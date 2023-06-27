@@ -16,7 +16,7 @@ const Gradient = () => {
     const gradient = `linear-gradient(${position}, ${color1}, ${color2})`;
     document.body.style.background = gradient;
     setOutput(`background: ${gradient}`);
-  }, [color1, color2]);
+  }, [color1, color2, position]);
 
   const handleChangeColor = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -58,7 +58,9 @@ const Gradient = () => {
           onChange={handleChange}
           className="custom-select"
         >
-          <option value="" className="placeholder-option">Select an option</option>
+          <option value="" className="placeholder-option">
+            Select an option
+          </option>
           <option value="to right">Right</option>
           <option value="to left">Left</option>
           <option value="to top">Top</option>
