@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import randomColor from "randomcolor";
+import randomcolor from "randomcolor";
 
 const Gradient = () => {
-  const [color1, setColor1] = useState(randomColor());
-  const [color2, setColor2] = useState(randomColor());
+  const [color1, setColor1] = useState(randomcolor());
+  const [color2, setColor2] = useState(randomcolor());
 
   useEffect(() => {
     const gradient = `linear-gradient(to right,${color1},${color2})`;
@@ -17,6 +17,11 @@ const Gradient = () => {
     } else if (name === "color2") {
       setColor2(value);
     }
+  };
+
+  const handleRandomClick = () => {
+    setColor1(randomcolor());
+    setColor2(randomcolor());
   };
 
   return (
@@ -36,7 +41,9 @@ const Gradient = () => {
           onChange={handleChangeColor}
         />
       </div>
-      <button className="btnRandom">Generate Random Gradient !</button>
+      <button className="btnRandom" onClick={handleRandomClick}>
+        Generate Random Gradient !
+      </button>
     </div>
   );
 };
