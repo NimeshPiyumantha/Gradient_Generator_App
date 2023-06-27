@@ -8,10 +8,12 @@ import randomcolor from "randomcolor";
 const Gradient = () => {
   const [color1, setColor1] = useState(randomcolor());
   const [color2, setColor2] = useState(randomcolor());
+  const [output, setOutput] = useState("");
 
   useEffect(() => {
-    const gradient = `linear-gradient(to right,${color1},${color2})`;
+    const gradient = `linear-gradient(to right, ${color1}, ${color2})`;
     document.body.style.background = gradient;
+    setOutput(`background: ${gradient}`);
   }, [color1, color2]);
 
   const handleChangeColor = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,7 +32,7 @@ const Gradient = () => {
 
   return (
     <div className="gradient">
-      <h1>Create You Own Gradient !</h1>
+      <h1>Create you own gradient!</h1>
       <div className="colorPicker">
         <input
           type="color"
@@ -46,7 +48,7 @@ const Gradient = () => {
         />
       </div>
       <button className="btnRandom" onClick={handleRandomClick}>
-        Generate Random Gradient !
+        Generate Random gradient!
       </button>
       <div className="output">
         <SyntaxHighlighter language="css" style={arduinoLight}>
