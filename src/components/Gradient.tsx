@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { arduinoLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { IoCopyOutline } from "react-icons/io5";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import randomcolor from "randomcolor";
 
 const Gradient = () => {
@@ -44,6 +48,14 @@ const Gradient = () => {
       <button className="btnRandom" onClick={handleRandomClick}>
         Generate Random Gradient !
       </button>
+      <div className="output">
+        <SyntaxHighlighter language="css" style={arduinoLight}>
+          {output}
+        </SyntaxHighlighter>
+        <CopyToClipboard text={`background: ${output}`}>
+          <IoCopyOutline style={{ cursor: "pointer", fontSize: "25px" }} />
+        </CopyToClipboard>
+      </div>
     </div>
   );
 };
