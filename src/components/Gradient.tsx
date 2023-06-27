@@ -10,12 +10,31 @@ const Gradient = () => {
     document.body.style.background = gradient;
   }, [color1, color2]);
 
+  const handleChangeColor = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    if (name === "color1") {
+      setColor1(value);
+    } else if (name === "color2") {
+      setColor2(value);
+    }
+  };
+
   return (
     <div className="gradient">
       <h1>Create You Own Gradient!</h1>
       <div className="colorPicker">
-        <input type="color" name="color1" value={color1} />
-        <input type="color" name="color2" value={color2} />
+        <input
+          type="color"
+          name="color1"
+          value={color1}
+          onChange={handleChangeColor}
+        />
+        <input
+          type="color"
+          name="color2"
+          value={color2}
+          onChange={handleChangeColor}
+        />
       </div>
     </div>
   );
