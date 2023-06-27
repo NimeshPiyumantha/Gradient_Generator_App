@@ -4,6 +4,7 @@ import { arduinoLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { IoCopyOutline } from "react-icons/io5";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import randomcolor from "randomcolor";
+import "../App.css";
 
 const Gradient = () => {
   const [color1, setColor1] = useState(randomcolor());
@@ -51,8 +52,13 @@ const Gradient = () => {
           value={color2}
           onChange={handleChangeColor}
         />
-        <select value={position} onChange={handleChange}>
-          <option value="to right">Select an option</option>
+
+        <select
+          value={position}
+          onChange={handleChange}
+          className="custom-select"
+        >
+          <option value="" className="placeholder-option">Select an option</option>
           <option value="to right">Right</option>
           <option value="to left">Left</option>
           <option value="to top">Top</option>

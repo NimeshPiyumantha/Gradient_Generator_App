@@ -19,7 +19,7 @@ body,
 }
 
 .gradient h1 {
-  color: #d9d9d9;
+  color: #2f3542;
   text-decoration: underline;
   margin-bottom: 2rem;
   font-weight: bold;
@@ -55,4 +55,36 @@ body,
   font-size: 16px;
   background: #fff;
   padding: 10px 20px;
+}
+
+input[type="color"] {
+  appearance: none;
+  width: 11em;
+  height: 4em;
+  font-size: medium;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(223, 225, 227);
+  padding: 10px;
+  width: 11em;
+  border-radius: 8%;
+  color: rgb(20, 15, 19);
+  font-size: medium;
+  font-weight: bold;
+}
+
+option {
+  padding: 8px 16px;
+  background-color: #fff;
+  color: rgb(20, 15, 19);
+  font-size: medium;
+  font-weight: bold;
 }
