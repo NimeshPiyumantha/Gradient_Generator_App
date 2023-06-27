@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import randomColor from "randomcolor";
 
 const Gradient = () => {
-  const [color1, setColor1] = useState("");
-  const [color2, setColor2] = useState("");
+  const [color1, setColor1] = useState(randomColor());
+  const [color2, setColor2] = useState(randomColor());
 
   return (
     <div className="app">
