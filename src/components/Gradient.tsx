@@ -21,7 +21,7 @@ const Gradient = () => {
 
   return (
     <div className="gradient">
-      <h1>Create You Own Gradient!</h1>
+      <h1>Create You Own Gradient !</h1>
       <div className="colorPicker">
         <input
           type="color"
@@ -36,6 +36,7 @@ const Gradient = () => {
           onChange={handleChangeColor}
         />
       </div>
+      <button className="btnRandom">Generate Random Gradient !</button>
     </div>
   );
 };

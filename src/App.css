@@ -22,6 +22,7 @@ body,
   color: #d9d9d9;
   text-decoration: underline;
   margin-bottom: 2rem;
+  font-weight: bold;
 }
 
 .colorPicker {
@@ -35,9 +36,10 @@ body,
   background: #358835;
   color: #fff;
   font-size: 16px;
+  font-weight: bold;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 15px;
   transition: all 0.3s ease;
 }
 
